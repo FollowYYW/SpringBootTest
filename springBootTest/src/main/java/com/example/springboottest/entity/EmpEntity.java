@@ -1,21 +1,18 @@
 package com.example.springboottest.entity;
 
 import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.math.BigDecimal;
-import java.util.Date;
 
-@Getter
-@Setter
+@Data
 @Builder
-public class Emp {
+public class EmpEntity {
 
     /**
      * 员工编号
      */
-    private String empNo;
+    private BigDecimal empNo;
     /**
      * 员工姓名
      */
@@ -27,11 +24,11 @@ public class Emp {
     /**
      * 上级编号
      */
-    private Integer mgr;
+    private BigDecimal mgr;
     /**
      * 入职日期
      */
-    private Date hireDate;
+    private String hireDate;
     /**
      * 工资
      */
@@ -43,6 +40,6 @@ public class Emp {
     /**
      * 部门编号
      */
-    private Integer deptNo;
+    private BigDecimal deptNo;
 
 }
