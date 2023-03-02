@@ -9,8 +9,9 @@ battle<br>
 &nbsp;&nbsp; --serve &nbsp;&nbsp; 业务模块<br>
 &nbsp;&nbsp;&nbsp;&nbsp; --battle-system 系统业务模块<br>
 &nbsp;&nbsp;&nbsp;&nbsp; --battle-user 业务用户模块<br>
+----
 
-已完成集成组件与实现功能
+##已完成集成组件与实现功能
 + 对外接口模块
 + gateway网关模块
 + common redis 集成
@@ -18,10 +19,13 @@ battle<br>
 + feign 集成
 + Nacos 集成
 
-待完成组件与功能
+##待完成组件与功能
 + rocketMQ
 + 鉴权(接口鉴权+用户鉴权)
 + 过滤器
 + 全局异常定义与捕获(状态码定义)
 + swagger 
 + 安全服务
+
+----
+#服务介绍
