@@ -1,4 +1,4 @@
-package com.battle.common.config;
+package com.battle.common.redis.config;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;

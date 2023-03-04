@@ -1,6 +1,6 @@
 package com.battle.user.service.serviceimpl;
 
-import com.battle.common.util.RedisUtil;
+import com.battle.common.redis.util.RedisUtil;
 import com.battle.user.entity.dos.AppUser;
 import com.battle.user.mapper.AppUserMapper;
 import com.battle.user.service.AppUserService;

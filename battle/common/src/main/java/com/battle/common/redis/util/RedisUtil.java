@@ -1,4 +1,4 @@
-package com.battle.common.util;
+package com.battle.common.redis.util;
 
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
