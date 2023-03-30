@@ -1,5 +1,6 @@
 package com.battle.user.controller;
 
+import com.battle.common.returnData.ResultData;
 import com.battle.user.entity.dos.AppUser;
 import com.battle.user.service.AppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,8 @@ public class AppUserController {
     private AppUserService appUserService;
 
     @PostMapping("/getAppUser")
-    public AppUser getAppUser(@RequestParam Integer id){
-        return appUserService.getAppUser(id);
+    public ResultData getAppUser(@RequestParam Integer id){
+        AppUser appUser = appUserService.getAppUser(id);
+        return ResultData.success(appUser);
     }
 }

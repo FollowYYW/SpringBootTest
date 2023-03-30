@@ -1,5 +1,6 @@
 package com.battle.user.controller;
 
+import com.battle.common.returnData.ResultData;
 import com.battle.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,9 +27,9 @@ public class UserController {
     private UserService userService;
 
     @GetMapping("/request/{request}")
-    public String printRequest(@PathVariable String request){
+    public ResultData printRequest(@PathVariable String request){
         userService.printRequest(request);
         userService.printRequest(test);
-        return request;
+        return ResultData.success(request);
     }
 }

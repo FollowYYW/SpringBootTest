@@ -1,6 +1,7 @@
 package com.battle.system.controller;
 
 import com.alibaba.nacos.shaded.org.checkerframework.checker.units.qual.A;
+import com.battle.common.returnData.ResultData;
 import com.battle.system.entity.dos.AppUser;
 import com.battle.system.feign.BattleUserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,13 +31,15 @@ public class SystemController {
     public BattleUserFeign userFeign;
 
     @GetMapping("/getUserRequest/{request}")
-    public String getUserRequest(@PathVariable String request){
-        return restTemplate.getForObject("http://battle-user/user/request/" + request, String.class);
+    public ResultData getUserRequest(@PathVariable String request){
+        String forObject = restTemplate.getForObject("http://battle-user/user/request/" + request, String.class);
+        return ResultData.success(forObject);
     }
 
     @GetMapping("/systemGetAppUser/{id}")
-    public AppUser systemGetAppUser(@PathVariable Integer id){
-        return userFeign.getAppUser(id);
+    public ResultData systemGetAppUser(@PathVariable Integer id){
+        AppUser appUser = userFeign.getAppUser(id);
+        return ResultData.success(appUser);
     }
 
 }

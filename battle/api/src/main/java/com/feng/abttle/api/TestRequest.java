@@ -1,5 +1,6 @@
 package com.feng.abttle.api;
 
+import com.battle.common.returnData.ResultData;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -13,5 +14,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public interface TestRequest {
 
     @PostMapping("/hello")
-    String testRequest(@RequestBody String test);
+    ResultData testRequest(@RequestBody String test);
 }
