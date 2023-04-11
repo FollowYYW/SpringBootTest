@@ -2,14 +2,12 @@ package com.battle.common.exception;
 
 import com.alibaba.fastjson.JSON;
 import com.battle.common.returnData.ResultData;
-import com.fasterxml.jackson.annotation.JsonAlias;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.converter.HttpMessageNotReadableException;
 import org.springframework.jdbc.BadSqlGrammarException;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.FieldError;
-import org.springframework.web.HttpMediaTypeException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -78,18 +76,18 @@ public class GlobalExceptionHandler {
         return ResultData.fail(ExceptionEnums.HttpMessageNotReadableException.getCode(), ExceptionEnums.HttpMessageNotReadableException.getMessage());
     }
 
-    /**
-     * HTTP 请求Content-Type属性设置错误
-     *
-     * @param e HttpMediaTypeException
-     * @return ResultData
-     */
-    @ExceptionHandler(value = HttpMediaTypeException.class)
-    @ResponseStatus(HttpStatus.OK)
-    public ResultData httpMediaTypeException(HttpMediaTypeException e) {
-//        log.error("httpMediaTypeException:[exception:{}]", e.getSupportedMediaTypes());
-        return ResultData.fail(ExceptionEnums.HttpMediaTypeException.getCode(), ExceptionEnums.HttpMediaTypeException.getMessage());
-    }
+//    /**
+//     * HTTP 请求Content-Type属性设置错误
+//     *
+//     * @param e HttpMediaTypeException
+//     * @return ResultData
+//     */
+//    @ExceptionHandler(value = HttpMediaTypeException.class)
+//    @ResponseStatus(HttpStatus.OK)
+//    public ResultData httpMediaTypeException(HttpMediaTypeException e) {
+////        log.error("httpMediaTypeException:[exception:{}]", e.getSupportedMediaTypes());
+//        return ResultData.fail(ExceptionEnums.HttpMediaTypeException.getCode(), ExceptionEnums.HttpMediaTypeException.getMessage());
+//    }
 //
 //    /**
 //     * 自定义业务/数据异常处理
