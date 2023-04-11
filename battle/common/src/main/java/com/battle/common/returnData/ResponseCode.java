@@ -10,19 +10,19 @@ public enum ResponseCode {
     /**
      * 成功
      */
-    SUCCESS("200", "成功"),
+    SUCCESS(200, "成功"),
     /**
      * 失败
      */
-    FAIL("500", "失败"),
+    FAIL(500, "失败"),
     ;
 
-    private ResponseCode(String val, String msg) {
+    private ResponseCode(int val, String msg) {
         this.val = val;
         this.msg = msg;
     }
 
-    public String val(){
+    public int val(){
         return val;
     }
 
@@ -30,6 +30,6 @@ public enum ResponseCode {
         return msg;
     }
 
-    private String val;
+    private int val;
     private String msg;
 }

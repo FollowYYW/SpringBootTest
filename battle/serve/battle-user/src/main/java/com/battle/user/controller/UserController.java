@@ -30,6 +30,13 @@ public class UserController {
     public ResultData printRequest(@PathVariable String request){
         userService.printRequest(request);
         userService.printRequest(test);
+//        try {
+            if(Integer.parseInt(request) > 10){
+                int i = 1/0;
+            }
+//        }catch (Exception e){
+//            throw new RuntimeException("除数不能为0");
+//        }
         return ResultData.success(request);
     }
 }

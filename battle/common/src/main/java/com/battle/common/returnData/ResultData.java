@@ -7,13 +7,13 @@ package com.battle.common.returnData;
  */
 public class ResultData {
 
-    private String code;
+    private int code;
 
     private String message;
 
     private Object data;
 
-    public ResultData(String code, String message, Object data) {
+    public ResultData(int code, String message, Object data) {
         this.code = code;
         this.message = message;
         this.data = data;
@@ -21,11 +21,11 @@ public class ResultData {
 
     public ResultData(){}
 
-    public String getCode() {
+    public int getCode() {
         return code;
     }
 
-    public void setCode(String code) {
+    public void setCode(int code) {
         this.code = code;
     }
 
@@ -61,11 +61,11 @@ public class ResultData {
         return new ResultData(ResponseCode.FAIL.val(), msg, null);
     }
 
-    public static ResultData fail (String code, String msg){
+    public static ResultData fail (int code, String msg){
         return new ResultData(code, msg, null);
     }
 
-    public static ResultData fail (String code, String msg, Object data){
+    public static ResultData fail (int code, String msg, Object data){
         return new ResultData(code, msg, data);
     }
 }
