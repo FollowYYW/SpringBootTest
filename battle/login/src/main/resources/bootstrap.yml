@@ -1,12 +1,12 @@
 
 server:
-  port: 8082
+  port: 8088
 
 spring:
   profiles:
     active: kinds
   application:
-    name: battle-user
+    name: battle-login
   cloud:
     nacos:
       discovery:

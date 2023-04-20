@@ -6,9 +6,11 @@ battle<br>
 &nbsp;&nbsp; --common &nbsp;&nbsp; 公共工具服务模块<br>
 &nbsp;&nbsp; --data-source &nbsp;&nbsp; 数据源模块<br>
 &nbsp;&nbsp; --gateway &nbsp;&nbsp; 网关模块<br>
+&nbsp;&nbsp; --login &nbsp;&nbsp;登录模块<br>
 &nbsp;&nbsp; --serve &nbsp;&nbsp; 业务模块<br>
 &nbsp;&nbsp;&nbsp;&nbsp; --battle-system 系统业务模块<br>
 &nbsp;&nbsp;&nbsp;&nbsp; --battle-user 业务用户模块<br>
+
 ----
 
 ##已完成集成组件与实现功能
