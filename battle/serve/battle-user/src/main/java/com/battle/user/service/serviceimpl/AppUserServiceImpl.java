@@ -24,7 +24,9 @@ public class AppUserServiceImpl implements AppUserService {
     public AppUser getAppUser(Integer id) {
 
         AppUser appUser = appUserMapper.selectById(id);
-        redisUtil.set(appUser.getName(),appUser.getPhone());
+        if (appUser != null) {
+            redisUtil.set(appUser.getUserName(),appUser.getPhone());
+        }
         return appUser;
     }
 }

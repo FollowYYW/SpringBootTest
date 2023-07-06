@@ -1,21 +1,15 @@
-package com.battle.user.entity.dos;
+package com.battle.user.entity.Ao;
 
 import lombok.Data;
 
-import java.util.Date;
-
 /**
  * @Author kinds
- * @Date 2023/2/26 21:04
+ * @Date 2023/5/6 0:53
  * @Description
  */
 @Data
-public class AppUser {
+public class UserInfoAo {
 
-    /**
-     * 主键
-     */
-    private String id;
     /**
      * 用户编码
      */
@@ -44,22 +38,5 @@ public class AppUser {
      * 年龄
      */
     private String age;
-    /**
-     * 创建时间
-     */
-    private Date createTime;
-    /**
-     * 创建人
-     */
-    private String createUser;
-    /**
-     * 最后一次修改时间
-     */
-    private Date updateTime;
-    /**
-     * 最后一次修改人
-     */
-    private String updateUser;
-
 
 }

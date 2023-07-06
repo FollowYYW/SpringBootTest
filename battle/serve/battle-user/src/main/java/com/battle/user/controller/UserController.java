@@ -1,14 +1,13 @@
 package com.battle.user.controller;
 
 import com.battle.common.returnData.ResultData;
+import com.battle.user.entity.Ao.UserInfoAo;
+import com.battle.user.entity.vo.AppUserVo;
 import com.battle.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @Author kinds
@@ -39,4 +38,35 @@ public class UserController {
 //        }
         return ResultData.success(request);
     }
+
+    // 创建用户
+    @PostMapping("/createUser")
+    public ResultData createUser(@RequestBody UserInfoAo userInfo){
+        AppUserVo appUser = userService.addUser(userInfo);
+        return ResultData.success(appUser);
+    }
+    // 修改用户
+    @PostMapping("/updateUser")
+    public ResultData updateUser(@RequestBody UserInfoAo userInfo){
+        return ResultData.success("");
+    }
+
+    // 删除用户
+    @PostMapping("/deleteUser")
+    public ResultData deleteUser(@RequestBody String userCode){
+        return ResultData.success("");
+    }
+
+    // 注销用户
+    @PostMapping("/logoutUser")
+    public ResultData logoutUser(@RequestBody String userCode){
+        return ResultData.success("");
+    }
+
+    // 恢复用户
+    @PostMapping("/recoverUser")
+    public ResultData recoverUser(@RequestBody String userCode){
+        return ResultData.success("");
+    }
+
 }

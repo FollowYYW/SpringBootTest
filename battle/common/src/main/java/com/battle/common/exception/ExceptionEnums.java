@@ -12,6 +12,8 @@ public enum ExceptionEnums {
     HttpMessageNotReadableException(10003, "HTTP解析请求参数异常"),
     HttpMediaTypeException(10004, "请求Content-Type属性设置错误"),
     BadSqlGrammarException(10005, "SQL 语法异常"),
+
+    AddUserFail(65001, "新增用户失败"),
     ;
 
 
